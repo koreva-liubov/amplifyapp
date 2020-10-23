@@ -1,5 +1,7 @@
 import React from 'react';
+import logo from './logo.svg';
 import './App.css';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
   
 
 function App() {
@@ -8,7 +10,7 @@ function App() {
 
       <header className="App-header">
 
-<video
+	<video
     id="my-player"
     class="video-js"
     controls
@@ -21,10 +23,11 @@ function App() {
     web browser that
       supports HTML5 video
   </p>
-</video>
+	</video>
       </header>
+	  <AmplifySignOut />
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
