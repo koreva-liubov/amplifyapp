@@ -13,7 +13,9 @@
     },
     "categories": {
       "auth": {
-        "amplifyapp6ad5a41d": {}
+        "amplifyapp6ad5a41d": {
+          "hostedUIProviderCreds": "[]"
+        }
       }
     }
   }

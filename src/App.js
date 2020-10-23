@@ -1,11 +1,16 @@
 import React from 'react';
 import './App.css';
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+
+Amplify.configure(awsconfig);
   
 
 function App() {
   return (
     <div className="App">
-
+	<AmplifySignOut />
       <header className="App-header">
 
 <video
@@ -27,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);
